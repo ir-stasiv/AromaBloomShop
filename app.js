@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   let activePage = localStorage.getItem("activePage") || "catalog.html";
-  let items = JSON.parse(localStorage.getItem("items")) || [];
-  let contentSection = document.getElementById("contentSection");
 
   loadPage(activePage);
 
@@ -31,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       })
       .then((html) => {
+        let items = JSON.parse(localStorage.getItem("items")) || [];
+        let contentSection = document.getElementById("contentSection");
+
         contentSection.innerHTML = html;
 
         //if Catalog page
@@ -252,13 +253,13 @@ function openShoppingListForm() {
   let totalPrice = 0;
   buyItems.forEach((item) => {
     // get sum for each item and count total price
-    let itemSum = parseFloat(item.price) * parseInt(item.itemCount);
+    let itemSum = parseFloat(item.price) * parseInt(item.count);
     totalPrice += itemSum;
 
     //create line in form
     let itemLine = document.createElement("li");
     itemLine.textContent = `${item.name} - ${item.price} грн × ${
-      item.itemCount
+      item.count
     } = ${itemSum.toFixed(2)} грн`;
 
     //add this line to orderList
