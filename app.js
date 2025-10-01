@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   Array.from(navLinks).forEach((link) => {
     link.addEventListener("click", (e) => {
       let page = link.getAttribute("data-page");
-      console.log("link in click", page);
+
       localStorage.setItem("activePage", page);
       loadPage(page);
     });
@@ -212,8 +212,6 @@ function editItem(index) {
   let form = document.getElementById("editCardForm");
   let items = JSON.parse(localStorage.getItem("items"));
   let item = items[index];
-
-  console.log(index);
 
   form.querySelector("#itemIndex").value = index;
   form.querySelector("#itemName").value = item.name;
