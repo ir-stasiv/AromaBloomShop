@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aroma Bloom - Панель менеджера</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ласкаво просимо на сторінку менеджера</h1>
+
+      <!-- The popup form  Create Card -->
+      <div class="form-popup" id="createCardForm">
+        <form class="form-container">
+          <label for="itemName">Назва:</label>
+          <input type="text" id="itemName" name="itemName" />
+          <br /><br />
+          <label for="itemDescription">Опис:</label>
+          <textarea id="itemDescription" name="itemDescription"></textarea>
+          <br /><br />
+          <label for="itemPrice">Ціна:</label>
+          <input
+            type="number"
+            id="itemPrice"
+            name="itemPrice"
+            min="1"
+            value="0"
+          />
+          <br /><br />
+          <label for="itemCount">Кількість товару:</label>
+          <input
+            type="number"
+            id="itemCount"
+            name="itemCount"
+            min="1"
+            value="0"
+          />
+          <br /><br />
+          <div class="form-btns">
+            <button class="create-btn" type="button" onclick="createCard()">
+              Створити картку
+            </button>
+            <button
+              type="button"
+              class="close-btn"
+              onclick="closeCreateCardForm()"
+            >
+              Закрити
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- The popup form  Update Card -->
+      <div class="form-popup" id="editCardForm">
+        <form class="form-container">
+          <input type="hidden" id="itemIndex" value="" />
+          <label for="itemName">Назва:</label>
+          <input type="text" id="itemName" name="itemName" />
+          <br /><br />
+          <label for="itemDescription">Опис:</label>
+          <textarea id="itemDescription" name="itemDescription"></textarea>
+          <br /><br />
+          <label for="itemPrice">Ціна:</label>
+          <input
+            type="number"
+            id="itemPrice"
+            name="itemPrice"
+            min="1"
+            value="0"
+          />
+          <br /><br />
+          <label for="itemCount">Кількість товару:</label>
+          <input
+            type="number"
+            id="itemCount"
+            name="itemCount"
+            min="1"
+            value="0"
+          />
+          <br /><br />
+          <div class="form-btns">
+            <button class="update-btn" type="button" onclick="updateCard()">
+              Оновити картку
+            </button>
+            <button
+              type="button"
+              class="close-btn"
+              onclick="closeEditCardForm()"
+            >
+              Закрити
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Controls Panel -->
+      <div class="controls-panel">
+        <button class="create-btn" onclick="openCreateCardForm()">
+          Створити картку товару
+        </button>
+        <div class="search-panel">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            onkeyup="sortByPriceForManager()"
+            placeholder="Пошук за назвою.."
+          />
+        </div>
+        <div class="sort-panel">
+          <h5>Сортування:</h5>
+          <button
+            id="sortByPriceBtn"
+            class="sort-btn"
+            onclick="sortByPriceForManager()"
+          >
+            спочатку дешевше
+          </button>
+          <button
+            id="sortByNameBtn"
+            class="sort-btn"
+            onclick="sortByNameForManager()"
+          >
+            за назвою
+          </button>
+        </div>
+      </div>
+
+      <div id="cardContainer" class="cardContainer">
+        <!-- Item cards will be dynamically added here -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-width: 100vh;
+  min-height: 100vh;
+  font-size: 16px;
+  color: #242424;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif,
+    sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  color: #242424;
+}
+h4 {
+  font-size: 20px;
+  color: #242424;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-panel {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.logo-img {
+  height: 50px;
+  width: 80px;
+}
+
+footer {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  padding: 10px;
+  background-color: #cb8c9b;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+/* Navigation Panel Styles */
+
+.navigation-panel {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #242424;
+  font-size: 16px;
+  padding: 8px 12px;
+}
+.nav-link:hover,
+.nav-link:active {
+  color: #be7384;
+}
+.nav-link.active-link {
+  color: #242424;
+  border-bottom: solid #be7384 2px;
+}
+/* Manager Panel Styles */
+
+.manager-panel {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.manager-icon {
+  height: 16px;
+  width: 16px;
+}
+.manager-icon:hover {
+  cursor: pointer;
+}
+/* Banner Panel Styles */
+.banner-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.banner-img {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Controls Panel Styles */
+.controls-panel {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: left;
+  margin: 0 auto;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 250px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nameCard {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #212121;
+}
+.priceCard {
+  color: #cb8c9b;
+  font-size: 22px;
+}
+.descriptionCard {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #717278;
+}
+.amountCard {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #212121;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.edit-btn {
+  background-color: #99e2fa;
+  color: #242424;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #05a0c0;
+}
+.delete-btn {
+  background-color: #f97f77;
+  color: #242424;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.delete-btn:hover {
+  background-color: #f43340;
+}
+
+.update-btn {
+  background-color: #242424;
+  color: white;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.update-btn:hover {
+  background-color: white;
+  color: #242424;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-btn {
+  background-color: white;
+  color: #242424;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.buy-btn:hover {
+  background-color: #242424;
+  color: white;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.download-btn {
+  background-color: white;
+  color: #242424;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.download-btn:hover {
+  background-color: #cb8c9b;
+  color: #242424;
+  border: #242424 solid 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.return-btn {
+  background-color: white;
+  color: #242424;
+  padding: 10px 20px;
+  border: #242424 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.return-btn:hover {
+  background-color: #242424;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Form Styles */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #212121;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: vertical;
+  font-family: inherit;
+  color: #212121;
+  background-color: #f9f9f9;
+}
+
+.form-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.close-btn {
+  background-color: white;
+  color: #242424;
+  margin: 5px;
+  padding: 10px 20px;
+  border: #242424 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.close-btn:hover {
+  background-color: red;
+  color: white;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #242424;
+  color: white;
+  margin: 10px;
+  padding: 10px 20px;
+  border: #242424 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: white;
+  color: #242424;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.create-btn {
+  background-color: #242424;
+  color: white;
+  margin: 10px;
+  padding: 10px 20px;
+  border: #242424 solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.create-btn:hover {
+  background-color: white;
+  color: #242424;
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/* Sort Panel Styles */
+.sort-panel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+.sort-btn {
+  background-color: white;
+  color: #242424;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sort-btn.active-link {
+  color: #242424;
+  border-bottom: solid #be7384 1px;
+  text-decoration: none;
+}
+
+/* Search Panel Styles */
+.search-panel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.search-input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #4a4747;
+}
+
+/* About  Page Styles */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0px;
+}
+.about-img {
+  width: 500px;
+  height: auto;
+}
+
+/* Contacts Page Styles */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  width: 300px;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}

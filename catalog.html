@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Aroma Bloom - Панель менеджера</title>
+  </head>
+  <body>
+    <!-- The popup form  Shopping Form -->
+    <div class="form-popup" id="shoppingListForm">
+      <!-- A button to open the popup form -->
+      <form class="form-container">
+        <h5>Ваші замовлення</h5>
+        <ul id="orderList"></ul>
+        <h4>Загальна сума: <span id="totalPrice"> </span></h4>
+
+        <div class="form-btns">
+          <button
+            type="button"
+            class="close-btn"
+            onclick="closeShoppingListForm()"
+          >
+            Закрити
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <h1>Ласкаво до магазину Aroma Bloom</h1>
+      <!-- Controls Panel -->
+      <div class="controls-panel">
+        <div>
+          <button class="btn" onclick="openShoppingListForm()">
+            Список покупок
+          </button>
+        </div>
+        <div class="search-panel">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            onkeyup="searchItemsForUser()"
+            placeholder="Пошук за назвою.."
+          />
+        </div>
+        <div class="sort-panel">
+          <h5>Сортування:</h5>
+          <button class="sort-btn" onclick="sortByPriceForUser()">
+            спочатку дешевше
+          </button>
+          <button class="sort-btn" onclick="sortByNameForUser()">
+            за назвою
+          </button>
+        </div>
+      </div>
+
+      <div id="catalogContainer" class="cardContainer">
+        <!-- Item cards will be dynamically added here -->
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
